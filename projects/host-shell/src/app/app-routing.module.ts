@@ -29,6 +29,11 @@ const routes: Routes = [
         remoteEntry: 'http://localhost:4203/remoteEntry.js',
         exposedModule: './DashboardModule',
       }).then((m) => m.DashboardModule),
+  },
+  {
+    path: '',
+    redirectTo: 'dashboard',
+    pathMatch: 'full',
   }
 ];
 

@@ -1,3 +1,33 @@
 
+
 <app-header></app-header>
-<router-outlet></router-outlet>
+<mat-sidenav-container class="container">
+  <mat-sidenav #drawer mode="side" opened class="sidebar">
+    <div class="logo"> Dashboard</div>
+
+    <mat-nav-list>
+      <a mat-list-item *ngFor="let item of menus" class="menu-item">
+        <mat-icon>{{ item.icon }}</mat-icon>
+
+        <span>{{ item.name }}</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar class="toolbar">
+      <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <span>Apple Dashboard</span>
+    </mat-toolbar>
+
+    <div class="content">
+      <mat-card class="apple-card">
+      <router-outlet></router-outlet>
+      </mat-card>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<app-footer></app-footer>
