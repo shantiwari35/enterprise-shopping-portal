@@ -17,21 +17,11 @@ export class AppComponent {
       name: 'Products',
       icon: 'inventory_2',
     },
-    {
-      name: 'Orders',
-      icon: 'shopping_cart',
-    },
+
     {
       name: 'Customers',
       icon: 'people',
     },
-    {
-      name: 'Reports',
-      icon: 'bar_chart',
-    },
-    {
-      name: 'Settings',
-      icon: 'settings',
-    },
+
   ];
 }

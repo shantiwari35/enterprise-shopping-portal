@@ -1,0 +1,9 @@
+/*
+ * Public API Surface of shared-ui
+ */
+
+export * from './lib/shared-ui.service';
+export * from './lib/shared-ui.component';
+export * from './lib/shared-ui.module';
+export * from './lib/shared-ui/components/app-icon/app-icon.component';
+export * from './lib/material/material.module';

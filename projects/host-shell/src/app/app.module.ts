@@ -14,9 +14,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 
+import { SharedUiModule } from 'shared-ui';
+
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent],
-  imports: [BrowserModule, AppRoutingModule, MatSidenavModule, MatToolbarModule, MatListModule, MatIconModule, MatButtonModule, MatCardModule, BrowserAnimationsModule],
+  imports: [BrowserModule, AppRoutingModule, MatSidenavModule, MatToolbarModule, MatListModule, MatIconModule, MatButtonModule, MatCardModule, SharedUiModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
