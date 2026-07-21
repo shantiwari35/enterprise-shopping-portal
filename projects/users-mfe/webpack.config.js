@@ -10,7 +10,7 @@ sharedMappings.register(
 
 module.exports = {
   output: {
-    uniqueName: "hostShell",
+    uniqueName: "usersMfe",
     publicPath: "auto"
   },
   optimization: {
@@ -29,20 +29,19 @@ module.exports = {
         library: { type: "module" },
 
         // For remotes (please adjust)
-        // name: "hostShell",
-        // filename: "remoteEntry.js",
-        // exposes: {
-        //     './Component': './projects/host-shell/src/app/app.component.ts',
-        // },
+        name: "usersMfe",
+        filename: "remoteEntry.js",
+        exposes: {
+            './UsersModule': './projects/users-mfe/src/app/features/users/users.module.ts',
+        },
 
         // For hosts (please adjust)
-        remotes: {
-            "productsMfe": "http://localhost:4201/remoteEntry.js",
-            "usersMfe": "http://localhost:4202/remoteEntry.js",
-            "dashboardMfe": "http://localhost:4203/remoteEntry.js"
+        // remotes: {
+        //     "hostShell": "http://localhost:4200/remoteEntry.js",
+        //     "productsMfe": "http://localhost:4201/remoteEntry.js",
+        //     "dashboardMfe": "http://localhost:4200/remoteEntry.js",
 
-
-        },
+        // },
 
         shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
