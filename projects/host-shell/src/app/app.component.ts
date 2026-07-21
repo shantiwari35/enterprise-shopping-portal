@@ -12,15 +12,19 @@ export class AppComponent {
     {
       name: 'Dashboard',
       icon: 'dashboard',
+      link: '/dashboard',
     },
     {
       name: 'Products',
       icon: 'inventory_2',
+      link: '/products',
+
     },
 
     {
       name: 'Customers',
       icon: 'people',
+      link: '/users',
     },
 
   ];
