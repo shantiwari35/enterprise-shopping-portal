@@ -28,13 +28,13 @@
 
   text-transform: none;
 
-  mat-icon {
-    font-size: 20px;
-    width: 20px;
-    height: 20px;
-  }
-}
 
+}
+mat-icon {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+}
 .primary {
 
   background: #0071e3;

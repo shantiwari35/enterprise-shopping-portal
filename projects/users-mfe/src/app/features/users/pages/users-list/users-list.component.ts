@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'projects/users-mfe/src/app/core/service/user.service';
 
 @Component({
   selector: 'app-users-list',
@@ -13,18 +14,36 @@ throw new Error('Method not implemented.');
 
   pageSize = 10;
 
+  users: any[] = [];
+
   loadPage(page: number) {
     this.page = page;
 
-    // this.getUsers();
+    this.getUsers();
   }
 
   changePageSize(size: number) {
     this.pageSize = size;
 
-    // this.getUsers();
+    this.getUsers();
   }
-  constructor() {}
+  constructor(private userService: UserService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getUsers();
+  }
+
+  getUsers() {
+    this.userService.getRandomUsers(this.page, this.pageSize).subscribe((response:any) => {
+      console.log('Users:', response.data);
+      const apiData = response?.data;
+      if(!response || !response.data || !response.data.data) {
+        console.error('Invalid response structure:', response);
+        return;
+      }
+      this.users = apiData?.data; // Assuming the API response has a 'data' property containing the user list
+      this.page = apiData?.page; // Assuming the API response has a 'page' property for the current page
+      this.pageSize = apiData?.limit; // Assuming the API response has a 'limit' property for the page size
+    });
+  }
 }

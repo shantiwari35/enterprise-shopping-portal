@@ -1,28 +1,33 @@
 <mat-card class="user-card">
   <div class="user-header">
     <div class="avatar-wrapper">
-      <lib-avatar [src]="'https://i.pravatar.cc/150?img=12'" [name]="'Shantanu Tiwari'"></lib-avatar>
+      <lib-avatar [src]="inputData?.picture.medium" [status]="'online'" [name]="getFullName()"></lib-avatar>
     </div>
 
     <div class="user-info">
-      <h3>Shantanu Tiwari</h3>
-      <p>Senior Frontend Engineer</p>
-      <span>Engineering • Pune</span>
+      <h3>{{ getFullName() }}</h3>
+      <p>
+        {{ inputData?.location?.street?.number }},
+        {{ inputData?.location?.street?.name }},
+        {{ inputData?.location?.city }},
+        {{ inputData?.location?.state }}
+      </p>
+      <span>{{ inputData?.location?.country }}, {{ inputData?.location?.postcode }}</span>
     </div>
   </div>
   <mat-divider></mat-divider>
   <div class="user-details">
     <div class="detail">
       <lib-app-icon [name]="'email'"></lib-app-icon>
-      <span>shantanu@ekart.com</span>
+      <span>{{ inputData?.email }}</span>
     </div>
     <div class="detail">
       <lib-app-icon [name]="'badge'"></lib-app-icon>
-      <span>Employee ID: EK10254</span>
+      <span>User name: {{ inputData?.login?.username }}</span>
     </div>
     <div class="detail">
       <lib-app-icon [name]="'calendar_month'"></lib-app-icon>
-      <span>Joined Jan 2023</span>
+      <span>Joined: {{ inputData?.registered?.date | date }}</span>
     </div>
   </div>
   <div class="actions">

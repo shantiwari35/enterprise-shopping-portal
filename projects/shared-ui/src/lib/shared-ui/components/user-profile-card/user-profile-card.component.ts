@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'lib-user-profile-card',
@@ -9,9 +9,16 @@ import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@
 })
 export class UserProfileCardComponent implements OnInit {
 
+  @Input('inputData') inputData: any;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  getFullName(): string {
+    if (this.inputData) {
+      return `${this.inputData.name.title} ${this.inputData.name.first} ${this.inputData.name.last}`;
+    }
+    return '';
+  }
 }

@@ -60,6 +60,7 @@ module.exports = {
           strictVersion: true,
           requiredVersion: "auto",
         },
+
         "@angular/router": {
           singleton: true,
           strictVersion: true,

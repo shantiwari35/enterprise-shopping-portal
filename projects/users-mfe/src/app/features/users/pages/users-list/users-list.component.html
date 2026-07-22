@@ -18,16 +18,7 @@
   </lib-pagination>
 
   <div class="user-grid">
-    <lib-user-profile-card></lib-user-profile-card>
+    <lib-user-profile-card *ngFor="let user of users"  [inputData]="user"></lib-user-profile-card>
 
-    <lib-user-profile-card></lib-user-profile-card>
-
-    <lib-user-profile-card></lib-user-profile-card>
-
-    <lib-user-profile-card></lib-user-profile-card>
-
-    <lib-user-profile-card></lib-user-profile-card>
-
-    <lib-user-profile-card></lib-user-profile-card>
   </div>
 </div>
