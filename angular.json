@@ -25,7 +25,12 @@
 						"inlineStyleLanguage": "scss",
 						"assets": [
 							"projects/host-shell/src/favicon.ico",
-							"projects/host-shell/src/assets"
+							"projects/host-shell/src/assets",
+               {
+                 "glob": "**/*",
+                 "input": "projects/shared-ui/src/assets",
+                 "output": "assets"
+               }
 						],
 						"styles": [
 							"projects/host-shell/src/styles.scss"

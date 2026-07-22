@@ -1,9 +1,11 @@
 <nav class="header-container">
   <div class="header-content">
-    <div class="logo">E-Commers</div>
+    <div class="logo">
+      <lib-logo></lib-logo>
+    </div>
     <div class="actions">
-      <a href="#" class="action-item">Cart</a>
-      <a href="#" class="action-item">Profile</a>
+      <a routerLink="#" class="action-item"><lib-app-icon [name]="'shopping_cart'"></lib-app-icon></a>
+      <a routerLink="#" class="action-item"><lib-app-icon [name]="'person'"></lib-app-icon></a>
     </div>
   </div>
 </nav>

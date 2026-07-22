@@ -1,0 +1,79 @@
+<svg width="900" height="220" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#0B3B91"/>
+    </linearGradient>
+
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFB000"/>
+      <stop offset="100%" stop-color="#F57C00"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Logo Icon -->
+  <g transform="translate(40,30)">
+    <!-- Top -->
+    <path
+      d="M70 20
+         H220
+         C235 20 245 32 240 45
+         L230 65
+         H100
+         L70 45
+         Q60 35 70 20Z"
+      fill="url(#blueGradient)" />
+
+    <!-- Middle Orange -->
+    <path
+      d="M15 85
+         H120
+         C135 85 140 95 135 105
+         L125 125
+         H0
+         Z"
+      fill="url(#orangeGradient)" />
+
+    <!-- Middle Blue -->
+    <path
+      d="M105 105
+         H220
+         L205 125
+         H120
+         Z"
+      fill="#2563EB" />
+
+    <!-- Bottom -->
+    <path
+      d="M70 145
+         H220
+         C235 145 245 155 250 175
+         L255 190
+         H65
+         C50 190 45 175 55 165
+         Z"
+      fill="#123A8B"/>
+  </g>
+
+  <!-- Text -->
+  <text
+    x="340"
+    y="115"
+    font-family="Inter, Arial, Helvetica, sans-serif"
+    font-size="96"
+    font-weight="700"
+    fill="#0B2A75">
+    Ekar<tspan fill="#F59E0B">t</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text
+    x="342"
+    y="165"
+    font-family="Inter, Arial, Helvetica, sans-serif"
+    font-size="22"
+    letter-spacing="5"
+    fill="#777777">
+    MOVE • CONNECT • DELIVER
+  </text>
+</svg>
