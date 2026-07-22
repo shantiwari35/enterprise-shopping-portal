@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersListComponent } from './features/users/pages/users-list/users-list.component';
+import { SharedUiModule } from "shared-ui";
 
 @NgModule({
   declarations: [
@@ -12,8 +13,9 @@ import { UsersListComponent } from './features/users/pages/users-list/users-list
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+    SharedUiModule
+],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,1 +1,33 @@
-<p>users-list works!</p>
+<div class="users-page">
+  <div class="page-header">
+    <div>
+      <h1>Customers</h1>
+
+      <p>Manage your customers and their information.</p>
+    </div>
+
+    <div class="header-actions">
+      <lib-search (search)="searchUsers($event)">
+      </lib-search>
+      <lib-button type="primary" label="Add Customer" icon="person_add" ></lib-button>
+    </div>
+  </div>
+  <lib-pagination [page]="page" [pageSize]="pageSize" [totalItems]="125" (pageChange)="loadPage($event)"
+    (pageSizeChange)="changePageSize($event)">
+
+  </lib-pagination>
+
+  <div class="user-grid">
+    <lib-user-profile-card></lib-user-profile-card>
+
+    <lib-user-profile-card></lib-user-profile-card>
+
+    <lib-user-profile-card></lib-user-profile-card>
+
+    <lib-user-profile-card></lib-user-profile-card>
+
+    <lib-user-profile-card></lib-user-profile-card>
+
+    <lib-user-profile-card></lib-user-profile-card>
+  </div>
+</div>

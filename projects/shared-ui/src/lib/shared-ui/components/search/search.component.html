@@ -1,0 +1,18 @@
+
+<div class="search">
+
+  <div class="search-box" [class.expanded]="expanded">
+
+   <lib-app-icon [name]="'search'"></lib-app-icon>
+
+    <input *ngIf="expanded" [(ngModel)]="value" placeholder="Search..." (input)="onSearch()">
+
+  </div>
+
+  <button type="button" title="Search" class="search-btn" (click)="toggle()">
+
+    <lib-app-icon [name]="expanded ? 'close' : 'search'"></lib-app-icon>
+
+  </button>
+
+</div>

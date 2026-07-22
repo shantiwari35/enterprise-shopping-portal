@@ -1,0 +1,14 @@
+<div class="avatar" [ngClass]="size">
+
+  <img *ngIf="src" [src]="src" title="{{ name }}" [alt]="name" (error)="imageError($event)">
+
+  <div class="initials" *ngIf="!src">
+
+    {{ initials }}
+
+  </div>
+
+
+</div>
+<span class="status" [ngClass]="status">
+</span>

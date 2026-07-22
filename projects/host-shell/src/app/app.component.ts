@@ -6,18 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'host-shell';
+
 
   menus = [
     {
       name: 'Dashboard',
       icon: 'dashboard',
       link: '/dashboard',
+      title: 'Dashboard',
     },
     {
       name: 'Products',
       icon: 'inventory_2',
       link: '/products',
+      title: 'Products',
 
     },
 
@@ -25,6 +27,7 @@ export class AppComponent {
       name: 'Customers',
       icon: 'people',
       link: '/users',
+      title: 'Customers',
     },
 
   ];

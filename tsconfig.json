@@ -18,6 +18,9 @@
     "paths": {
       "shared-ui": [
         "dist/shared-ui"
+      ],
+      "userProfileCard": [
+        "dist/user-profile-card"
       ]
     },
     "target": "es2020",

@@ -1,0 +1,36 @@
+lib-user-card {
+
+  transition: .35s;
+
+  display: block;
+}
+
+lib-user-card:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, .12);
+}
+
+.user-grid{
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+  gap: 24px;
+}
+.users-page{
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.header-actions{
+  display: inline-flex;
+    gap: 24px;
+    float: right;
+}

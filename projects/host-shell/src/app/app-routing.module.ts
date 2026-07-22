@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'products',
+    title: 'Products',
     loadChildren: () =>
       loadRemoteModule({
         type: 'module',
@@ -14,6 +15,7 @@ const routes: Routes = [
   },
   {
     path: 'users',
+    title: 'Users',
     loadChildren: () =>
       loadRemoteModule({
         type: 'module',
@@ -23,6 +25,7 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
+    title: 'Dashboard',
     loadChildren: () =>
       loadRemoteModule({
         type: 'module',

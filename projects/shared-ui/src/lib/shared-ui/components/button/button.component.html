@@ -1,0 +1,7 @@
+<button mat-flat-button [disabled]="disabled" class="app-button" [ngClass]="type" (click)="onClick()">
+
+  <lib-app-icon *ngIf="icon" [name]="icon"></lib-app-icon>
+
+  <span>{{ label }}</span>
+
+</button>

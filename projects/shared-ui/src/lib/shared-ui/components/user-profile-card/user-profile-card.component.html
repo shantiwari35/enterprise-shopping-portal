@@ -1,0 +1,35 @@
+<mat-card class="user-card">
+  <div class="user-header">
+    <div class="avatar-wrapper">
+      <lib-avatar [src]="'https://i.pravatar.cc/150?img=12'" [name]="'Shantanu Tiwari'"></lib-avatar>
+    </div>
+
+    <div class="user-info">
+      <h3>Shantanu Tiwari</h3>
+      <p>Senior Frontend Engineer</p>
+      <span>Engineering • Pune</span>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="user-details">
+    <div class="detail">
+      <lib-app-icon [name]="'email'"></lib-app-icon>
+      <span>shantanu@ekart.com</span>
+    </div>
+    <div class="detail">
+      <lib-app-icon [name]="'badge'"></lib-app-icon>
+      <span>Employee ID: EK10254</span>
+    </div>
+    <div class="detail">
+      <lib-app-icon [name]="'calendar_month'"></lib-app-icon>
+      <span>Joined Jan 2023</span>
+    </div>
+  </div>
+  <div class="actions">
+    <lib-button type="secondary" label="View" icon="visibility">
+    </lib-button>
+
+    <lib-button label="Edit" icon="edit">
+    </lib-button>
+  </div>
+</mat-card>

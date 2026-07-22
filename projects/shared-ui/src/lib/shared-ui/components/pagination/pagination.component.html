@@ -1,0 +1,77 @@
+<div class="pagination" [ngClass]="size">
+
+  <div class="page-info">
+
+    Showing
+
+    <strong>
+
+      {{ ((page-1) * pageSize) + 1 }}
+
+    </strong>
+
+    -
+
+    <strong>
+
+      {{ Math.min(page * pageSize, totalItems) }}
+
+    </strong>
+
+    of
+
+    <strong>
+
+      {{ totalItems }}
+
+    </strong>
+
+  </div>
+
+  <div class="controls">
+
+    <button title="Go to page 1" type="button" class="nav" (click)="goTo(1)" [disabled]="page===1">
+
+
+      <lib-app-icon [name]="'first_page'"></lib-app-icon>
+
+    </button>
+
+    <button title="Go to previous page" type="button" class="nav" (click)="goTo(page-1)" [disabled]="page===1">
+
+
+      <lib-app-icon [name]="'chevron_left'"></lib-app-icon>
+
+    </button>
+
+    <button title="Go to page {{ p }}" *ngFor="let p of pages" class="page" [class.active]="p===page" (click)="goTo(p)">
+
+      {{ p }}
+
+    </button>
+
+    <button title="Go to next page" type="button" class="nav" (click)="goTo(page+1)" [disabled]="page===totalPages">
+
+      <lib-app-icon [name]="'chevron_right'"></lib-app-icon>
+
+    </button>
+
+    <button title="Go to last page" type="button" class="nav" (click)="goTo(totalPages)" [disabled]="page===totalPages">
+
+      <lib-app-icon [name]="'last_page'"></lib-app-icon>
+
+    </button>
+
+  </div>
+
+  <select title="Change page size" class="page-size" [value]="pageSize" (change)="changePageSize($any($event.target).value)">
+
+    <option *ngFor="let size of pageSizeOptions" [value]="size">
+
+      {{ size }} / page
+
+    </option>
+
+  </select>
+
+</div>

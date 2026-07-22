@@ -4,10 +4,38 @@ import { SharedUiComponent } from './shared-ui.component';
 import { AppIconComponent } from './shared-ui/components/app-icon/app-icon.component';
 import { MaterialModule } from './material/material.module';
 import { LogoComponent } from './shared-ui/components/logo/logo.component';
+import { UserProfileCardComponent } from './shared-ui/components/user-profile-card/user-profile-card.component';
+import { ButtonComponent } from './shared-ui/components/button/button.component';
+import { IconLoaderService } from './shared-ui/services/icon-loader.service';
+import { AvatarComponent } from './shared-ui/components/avatar/avatar.component';
+import { PaginationComponent } from './shared-ui/components/pagination/pagination.component';
+import { SearchComponent } from './shared-ui/components/search/search.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [SharedUiComponent, AppIconComponent, LogoComponent],
-  imports: [CommonModule, MaterialModule],
-  exports: [AppIconComponent, MaterialModule, LogoComponent],
+  declarations: [
+    SharedUiComponent,
+    AppIconComponent,
+    LogoComponent,
+    UserProfileCardComponent,
+    ButtonComponent,
+    AvatarComponent,
+    PaginationComponent,
+    SearchComponent,
+  ],
+  imports: [CommonModule, MaterialModule, ReactiveFormsModule, FormsModule],
+  providers: [IconLoaderService],
+  exports: [
+    AppIconComponent,
+    MaterialModule,
+    LogoComponent,
+    UserProfileCardComponent,
+    ButtonComponent,
+    AvatarComponent,
+    PaginationComponent,
+    SearchComponent,
+  ],
 })
-export class SharedUiModule {}
+export class SharedUiModule {
+  constructor(private iconLoader: IconLoaderService) {}
+}
