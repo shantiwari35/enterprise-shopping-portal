@@ -4,9 +4,10 @@ const path = require("path");
 const share = mf.share;
 
 const sharedMappings = new mf.SharedMappings();
-sharedMappings.register(
-  path.join(__dirname, '../../tsconfig.json'),
-  [/* mapped paths to share */]);
+sharedMappings.register(path.join(__dirname, "../../tsconfig.json"), [
+  "shared-ui",
+  "shared-data",
+]);
 
 module.exports = {
   output: {
@@ -77,6 +78,9 @@ module.exports = {
           singleton: true,
           strictVersion: true,
           requiredVersion: "auto",
+        },
+        "shared-data": {
+          singleton: true,
         },
         ...sharedMappings.getDescriptors(),
       }),

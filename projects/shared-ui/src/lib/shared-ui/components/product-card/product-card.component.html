@@ -1,0 +1,41 @@
+<mat-card class="product-card">
+  <div class="image-container">
+    <img
+      title="{{ product.title }}"
+      [src]="product.images?.[0]"
+      [alt]="product.title"
+    />
+
+    <div class="category-chip">
+      {{ product.category?.name }}
+    </div>
+  </div>
+
+  <mat-card-content>
+    <h3>{{ product.title }}</h3>
+
+    <p class="description">
+      {{ product.description }}
+    </p>
+
+    <div class="price">₹ {{ product.price | number: "1.0-0" }}</div>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <lib-button
+      type="secondary"
+      icon="visibility"
+      label="View"
+      (clicked)="onViewDetails()"
+    >
+    </lib-button>
+
+    <lib-button
+      type="primary"
+      icon="shopping_bag"
+      label="Add"
+      (clicked)="onAddToCart()"
+    >
+    </lib-button>
+  </mat-card-actions>
+</mat-card>

@@ -14,7 +14,8 @@ import { CardComponent } from './shared/component/card/card.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ProductsModule
+    ProductsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

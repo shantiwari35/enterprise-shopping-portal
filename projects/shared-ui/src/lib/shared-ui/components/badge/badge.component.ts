@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class BadgeComponent implements OnInit {
 
   @Input('color') color:string= '';
-  @Input ('count') count:number=0;
+  @Input ('count') count:any=0;
   constructor() { }
 
   ngOnInit(): void {

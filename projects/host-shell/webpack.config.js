@@ -6,7 +6,10 @@ const share = mf.share;
 const sharedMappings = new mf.SharedMappings();
 sharedMappings.register(
   path.join(__dirname, '../../tsconfig.json'),
-  [/* mapped paths to share */]);
+  [
+    'shared-ui',
+    'shared-data'
+  ]);
 
 module.exports = {
   output: {
@@ -78,6 +81,9 @@ module.exports = {
           strictVersion: true,
           requiredVersion: "auto",
         },
+         'shared-data': {
+    singleton: true
+  },
 
         ...sharedMappings.getDescriptors(),
       }),

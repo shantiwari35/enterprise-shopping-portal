@@ -3,6 +3,7 @@
 :host {
   display: block;
   padding: var(--padding);
+
 }
 
 .pagination {
@@ -10,6 +11,7 @@
   --font-size: 14px;
   --padding: 18px 24px;
   --gap: 10px;
+  --margin:24px;
   --border-radius: 14px;
   /* ================= Variables ================= */
 
@@ -21,7 +23,7 @@
   gap: var(--gap);
 
   padding: var(--padding);
-
+  margin-bottom: var(--margin);
   border-radius: 22px;
 
   background: rgba(255, 255, 255, .72);

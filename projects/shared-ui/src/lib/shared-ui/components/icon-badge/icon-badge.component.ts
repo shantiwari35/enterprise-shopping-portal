@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class IconBadgeComponent implements OnInit {
   @Input() icon = 'shopping_cart';
-  @Input() count = 0;
+  @Input() count:number|null = 0;
   @Input() color = '#007AFF';
   @Input() title: string = '';
   constructor() {}
