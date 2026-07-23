@@ -15,10 +15,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 
 import { IconLoaderService, SharedUiModule } from 'shared-ui';
+import { CdkTableModule } from "@angular/cdk/table";
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent],
-  imports: [BrowserModule, AppRoutingModule, MatSidenavModule, MatToolbarModule, MatListModule, MatIconModule, MatButtonModule, MatCardModule, SharedUiModule, BrowserAnimationsModule],
+  imports: [BrowserModule,CommonModule, AppRoutingModule, MatSidenavModule, MatToolbarModule, MatListModule, MatIconModule, MatButtonModule, MatCardModule, SharedUiModule, BrowserAnimationsModule, CdkTableModule],
   providers: [IconLoaderService],
   bootstrap: [AppComponent],
 })

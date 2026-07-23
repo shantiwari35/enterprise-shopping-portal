@@ -1,16 +1,19 @@
+
+
 :host {
   display: block;
+  padding: var(--padding);
 }
 
 .pagination {
-
-  /* ================= Variables ================= */
-
-  --button-size: 42px;
+ --button-size: 42px;
   --font-size: 14px;
   --padding: 18px 24px;
   --gap: 10px;
   --border-radius: 14px;
+  /* ================= Variables ================= */
+
+
 
   display: flex;
   justify-content: space-between;

@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { UsersListComponent } from './features/users/pages/users-list/users-list.component';
 import { SharedUiModule } from "shared-ui";
 import { HttpClientModule } from '@angular/common/http';
+import { MatTableModule } from '@angular/material/table';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     SharedUiModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule,
+    CommonModule
 ],
   providers: [],
   bootstrap: [AppComponent]

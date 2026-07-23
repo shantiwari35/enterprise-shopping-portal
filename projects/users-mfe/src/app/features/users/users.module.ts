@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { UsersRoutingModule } from './users-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { MatTableModule } from '@angular/material/table';
 import { UserService } from '../../core/service/user.service';
 
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, UsersRoutingModule,HttpClientModule],
+  imports: [CommonModule, UsersRoutingModule,HttpClientModule,MatTableModule],
   providers: [UserService],
 })
 export class UsersModule {}

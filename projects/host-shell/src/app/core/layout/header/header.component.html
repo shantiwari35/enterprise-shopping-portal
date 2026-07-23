@@ -4,8 +4,15 @@
       <lib-logo></lib-logo>
     </div>
     <div class="actions">
-      <a routerLink="#" class="action-item"><lib-app-icon [name]="'shopping_cart'"></lib-app-icon></a>
+      <a routerLink="#" class="action-item">
+        <lib-app-icon *ngIf="!login ; else badgedIcon" [name]="'shopping_cart'"></lib-app-icon>
+      </a>
       <a routerLink="#" class="action-item"><lib-app-icon [name]="'person'"></lib-app-icon></a>
     </div>
   </div>
 </nav>
+
+
+<ng-template #badgedIcon>
+<lib-icon-badge icon="shopping_cart" [title]="'cart'" [count]="100"></lib-icon-badge>
+</ng-template>

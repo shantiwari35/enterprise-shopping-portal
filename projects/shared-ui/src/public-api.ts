@@ -6,6 +6,8 @@
 export * from './lib/shared-ui.service';
 export * from './lib/shared-ui/services/icon-loader.service';
 
+//pipe
+export * from './lib/shared-ui/pipes/text-truncate.pipe';
 
 // Components
 export * from './lib/shared-ui.component';
@@ -16,6 +18,8 @@ export * from './lib/shared-ui/components/button/button.component';
 export * from './lib/shared-ui/components/avatar/avatar.component';
 export * from './lib/shared-ui/components/pagination/pagination.component';
 export * from './lib/shared-ui/components/search/search.component';
+export * from './lib/shared-ui/components/badge/badge.component';
+export * from './lib/shared-ui/components/icon-badge/icon-badge.component';
 
 //modules
 export * from './lib/shared-ui.module';

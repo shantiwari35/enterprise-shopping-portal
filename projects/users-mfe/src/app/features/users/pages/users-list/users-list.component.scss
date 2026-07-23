@@ -34,3 +34,92 @@ lib-user-card:hover {
     gap: 24px;
     float: right;
 }
+
+.toolbar {
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  margin-bottom: 24px;
+  gap: 24px;
+
+}
+
+.view-toggle {
+
+  display: flex;
+
+  padding: 4px;
+
+  background: #f5f5f7;
+
+  border-radius: 14px;
+
+  border: 1px solid #e5e5ea;
+
+}
+
+.view-toggle button {
+
+  border-radius: 10px;
+
+  color: #6e6e73;
+
+  transition: .25s;
+
+}
+
+.view-toggle button.active {
+
+  background: white;
+
+  color: #0066ff;
+
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, .08);
+
+}
+
+.table-wrapper {
+
+  background: white;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  border: 1px solid #ececec;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, .05);
+
+}
+
+table {
+
+  width: 100%;
+
+}
+
+.mat-mdc-header-row {
+
+  background: #fafafa;
+
+}
+
+.mat-mdc-row:hover {
+
+  background: #f9fbff;
+
+}
+
+.avatar {
+
+  width: 42px;
+
+  height: 42px;
+
+  border-radius: 50%;
+
+}

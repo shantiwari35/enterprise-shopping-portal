@@ -1,20 +1,18 @@
-/// <reference types="jasmine" />
-
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UsersListComponent } from './users-list.component';
+import { IconBadgeComponent } from './icon-badge.component';
 
-describe('UsersListComponent', () => {
-  let component: UsersListComponent;
-  let fixture: ComponentFixture<UsersListComponent>;
+describe('IconBadgeComponent', () => {
+  let component: IconBadgeComponent;
+  let fixture: ComponentFixture<IconBadgeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UsersListComponent ]
+      declarations: [ IconBadgeComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(UsersListComponent);
+    fixture = TestBed.createComponent(IconBadgeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

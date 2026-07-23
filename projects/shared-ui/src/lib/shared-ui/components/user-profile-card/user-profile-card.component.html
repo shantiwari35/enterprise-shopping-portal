@@ -6,13 +6,17 @@
 
     <div class="user-info">
       <h3>{{ getFullName() }}</h3>
-      <p>
+      <p title="{{ inputData?.location?.street?.number }}, {{ inputData?.location?.street?.name }}, {{ inputData?.location?.city }}, {{ inputData?.location?.state }}">
         {{ inputData?.location?.street?.number }},
-        {{ inputData?.location?.street?.name }},
-        {{ inputData?.location?.city }},
-        {{ inputData?.location?.state }}
+        {{ inputData?.location?.street?.name | textTruncate:20 }},
+        {{ inputData?.location?.city | textTruncate:10 }},
+        {{ inputData?.location?.state | textTruncate:10 }}
+
       </p>
-      <span>{{ inputData?.location?.country }}, {{ inputData?.location?.postcode }}</span>
+
+      <span title="{{ inputData?.location?.country }}, {{ inputData?.location?.postcode }}">
+        {{ inputData?.location?.country }}, {{ inputData?.location?.postcode }}
+      </span>
     </div>
   </div>
   <mat-divider></mat-divider>

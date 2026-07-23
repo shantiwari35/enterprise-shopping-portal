@@ -6,19 +6,120 @@
       <p>Manage your customers and their information.</p>
     </div>
 
-    <div class="header-actions">
-      <lib-search (search)="searchUsers($event)">
-      </lib-search>
-      <lib-button type="primary" label="Add Customer" icon="person_add" ></lib-button>
+    <div class="toolbar">
+      <div class="header-actions">
+        <lib-search (search)="searchUsers($event)"> </lib-search>
+        <lib-button
+          type="primary"
+          label="Add Customer"
+          icon="person_add"
+        ></lib-button>
+      </div>
+      <div class="view-toggle">
+        <button
+          mat-button
+          [class.active]="viewMode === 'card'"
+          (click)="changeView('card')"
+        >
+          <lib-app-icon [name]="'view_module'"></lib-app-icon>
+          Cards
+        </button>
+
+        <button
+          mat-button
+          [class.active]="viewMode === 'table'"
+          (click)="changeView('table')"
+        >
+          <lib-app-icon [name]="'table_rows'"></lib-app-icon>
+          Table
+        </button>
+      </div>
     </div>
-  </div>
-  <lib-pagination [page]="page" [pageSize]="pageSize" [totalItems]="125" (pageChange)="loadPage($event)"
-    (pageSizeChange)="changePageSize($event)">
 
-  </lib-pagination>
+    <lib-pagination
+      [page]="page"
+      [pageSize]="pageSize"
+      [totalItems]="totalItems"
+      (pageChange)="loadPage($event)"
+      (pageSizeChange)="changePageSize($event)"
+    >
+    </lib-pagination>
 
-  <div class="user-grid">
-    <lib-user-profile-card *ngFor="let user of users"  [inputData]="user"></lib-user-profile-card>
+    <div class="user-grid" *ngIf="viewMode === 'card'">
+      <lib-user-profile-card
+        *ngFor="let user of users"
+        [inputData]="user"
+      ></lib-user-profile-card>
+    </div>
 
+    <div class="table-wrapper" *ngIf="viewMode === 'table'">
+      <table mat-table [dataSource]="dataSource">
+        <!-- Avatar -->
+
+        <ng-container matColumnDef="avatar">
+          <th mat-header-cell *matHeaderCellDef></th>
+
+          <td mat-cell *matCellDef="let user">
+            <img alt="Avatar" class="avatar" [src]="user.picture.thumbnail" />
+          </td>
+        </ng-container>
+
+        <!-- Name -->
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+
+          <td mat-cell *matCellDef="let user">
+            {{ user.name.first }} {{ user.name.last }}
+          </td>
+        </ng-container>
+
+        <!-- Email -->
+
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef>Email</th>
+
+          <td mat-cell *matCellDef="let user">
+            {{ user.email }}
+          </td>
+        </ng-container>
+
+        <!-- Phone -->
+
+        <ng-container matColumnDef="phone">
+          <th mat-header-cell *matHeaderCellDef>Phone</th>
+
+          <td mat-cell *matCellDef="let user">
+            {{ user.phone }}
+          </td>
+        </ng-container>
+
+        <!-- Country -->
+
+        <ng-container matColumnDef="country">
+          <th mat-header-cell *matHeaderCellDef>Country</th>
+
+          <td mat-cell *matCellDef="let user">
+            {{ user.location.country }}
+          </td>
+        </ng-container>
+
+        <!-- Actions -->
+
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef></th>
+
+          <td mat-cell *matCellDef="let user">
+            <button type="button" title="More options" mat-icon-button>
+              <lib-app-icon [name]="'more_vert'"></lib-app-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
   </div>
 </div>

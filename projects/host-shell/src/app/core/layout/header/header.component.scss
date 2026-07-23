@@ -36,6 +36,8 @@
 
   .action-item {
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
     color: #1d1d1f;
     font-size: 0.9rem;
     font-weight: 500;

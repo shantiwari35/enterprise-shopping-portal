@@ -11,6 +11,9 @@ import { AvatarComponent } from './shared-ui/components/avatar/avatar.component'
 import { PaginationComponent } from './shared-ui/components/pagination/pagination.component';
 import { SearchComponent } from './shared-ui/components/search/search.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TextTruncatePipe } from './shared-ui/pipes/text-truncate.pipe';
+import { BadgeComponent } from './shared-ui/components/badge/badge.component';
+import { IconBadgeComponent } from './shared-ui/components/icon-badge/icon-badge.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AvatarComponent,
     PaginationComponent,
     SearchComponent,
+    TextTruncatePipe,
+    BadgeComponent,
+    IconBadgeComponent,
   ],
   imports: [CommonModule, MaterialModule, ReactiveFormsModule, FormsModule],
   providers: [IconLoaderService],
@@ -34,6 +40,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AvatarComponent,
     PaginationComponent,
     SearchComponent,
+    TextTruncatePipe,
+    BadgeComponent,
+    IconBadgeComponent,
   ],
 })
 export class SharedUiModule {
