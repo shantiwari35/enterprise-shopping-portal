@@ -29,8 +29,9 @@
 /* Menu */
 
 .menu-item {
-  height: 52px;
+  height: 52px !important;
   margin-bottom: 8px;
+  display: inline-flex;
   border-radius: 14px;
   transition: all .25s ease;
   color: #555;
