@@ -5,24 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersListComponent } from './features/users/pages/users-list/users-list.component';
 import { SharedUiModule } from "shared-ui";
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
 import { CommonModule } from '@angular/common';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    UsersListComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    SharedUiModule,
-    HttpClientModule,
-    MatTableModule,
-    CommonModule
-],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        UsersListComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        SharedUiModule,
+        MatTableModule,
+        CommonModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }

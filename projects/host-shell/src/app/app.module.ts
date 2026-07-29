@@ -17,26 +17,19 @@ import { MatCardModule } from '@angular/material/card';
 import { SharedUiModule } from 'shared-ui';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
-@NgModule({
-  declarations: [AppComponent,HeaderComponent, FooterComponent],
-  imports: [
-    BrowserModule,
-    CommonModule,
-    AppRoutingModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatListModule,
-    MatIconModule,
-    MatButtonModule,
-    MatCardModule,
-    SharedUiModule,
-    BrowserAnimationsModule,
-    CdkTableModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [AppComponent, HeaderComponent, FooterComponent],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        CommonModule,
+        AppRoutingModule,
+        MatSidenavModule,
+        MatToolbarModule,
+        MatListModule,
+        MatIconModule,
+        MatButtonModule,
+        MatCardModule,
+        SharedUiModule,
+        BrowserAnimationsModule,
+        CdkTableModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}
