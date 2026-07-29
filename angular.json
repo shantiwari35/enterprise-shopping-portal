@@ -111,7 +111,8 @@
 							"projects/host-shell/src/assets"
 						],
 						"styles": [
-							"projects/host-shell/src/styles.scss"
+							"projects/host-shell/src/styles.scss",
+              "src/styles.scss"
 						],
 						"scripts": []
 					}
