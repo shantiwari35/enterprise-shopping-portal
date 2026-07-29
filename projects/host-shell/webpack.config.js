@@ -82,8 +82,8 @@ module.exports = {
           requiredVersion: "auto",
         },
          'shared-data': {
-    singleton: true
-  },
+          singleton: true
+        },
 
         ...sharedMappings.getDescriptors(),
       }),

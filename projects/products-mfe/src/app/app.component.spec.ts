@@ -26,10 +26,11 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('products-mfe');
   });
 
-  it('should render title', () => {
+
+  it('should render h1', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('products-mfe app is running!');
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('h1')?.textContent).toContain('Products MFE');
   });
 });
