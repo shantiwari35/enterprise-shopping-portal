@@ -19,7 +19,8 @@ import { CdkTableModule } from '@angular/cdk/table';
 import { CommonModule } from '@angular/common';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
-@NgModule({ declarations: [AppComponent, HeaderComponent, FooterComponent],
+@NgModule({
+    declarations: [AppComponent],
     bootstrap: [AppComponent], imports: [BrowserModule,
         CommonModule,
         AppRoutingModule,
@@ -31,5 +32,6 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
         MatCardModule,
         SharedUiModule,
         BrowserAnimationsModule,
-        CdkTableModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        CdkTableModule, HeaderComponent, FooterComponent], providers: [provideHttpClient(withInterceptorsFromDi())]
+})
 export class AppModule {}

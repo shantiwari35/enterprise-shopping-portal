@@ -8,14 +8,12 @@ import { SharedUiModule } from "projects/shared-ui/src/public-api";
 
 
 @NgModule({
-  declarations: [
-    ProductListComponent
-  ],
-  providers:[],
-  imports: [
-    CommonModule,
-    ProductsRoutingModule,
-    SharedUiModule
-]
+    providers: [],
+    imports: [
+        CommonModule,
+        ProductsRoutingModule,
+        SharedUiModule,
+        ProductListComponent
+    ]
 })
 export class ProductsModule { }

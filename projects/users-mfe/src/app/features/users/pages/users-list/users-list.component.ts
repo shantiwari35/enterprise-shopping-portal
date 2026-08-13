@@ -1,11 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatTableDataSource, MatTable, MatColumnDef, MatHeaderCellDef, MatHeaderCell, MatCellDef, MatCell, MatHeaderRowDef, MatHeaderRow, MatRowDef, MatRow } from '@angular/material/table';
 import { UserService } from 'projects/users-mfe/src/app/core/service/user.service';
+import { SharedUiModule } from 'shared-ui';
+import { MatButton, MatIconButton } from '@angular/material/button';
+import { NgIf, NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-users-list',
-  templateUrl: './users-list.component.html',
-  styleUrls: ['./users-list.component.scss'],
+    selector: 'app-users-list',
+    templateUrl: './users-list.component.html',
+    styleUrls: ['./users-list.component.scss'],
+    standalone: true,
+    imports: [
+        SharedUiModule,
+        MatButton,
+        NgIf,
+        NgFor,
+        MatTable,
+        MatColumnDef,
+        MatHeaderCellDef,
+        MatHeaderCell,
+        MatCellDef,
+        MatCell,
+        MatIconButton,
+        MatHeaderRowDef,
+        MatHeaderRow,
+        MatRowDef,
+        MatRow,
+    ],
 })
 export class UsersListComponent implements OnInit {
   page = 1;

@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { IconLoaderService } from '../public-api';
 
 @Component({
-  selector: 'lib-shared-ui',
-  template: `
+    selector: 'lib-shared-ui',
+    template: `
     <p>
       shared-ui works!
     </p>
   `,
-  styles: [
-  ]
+    styles: [],
+    standalone: true
 })
 export class SharedUiComponent implements OnInit {
 

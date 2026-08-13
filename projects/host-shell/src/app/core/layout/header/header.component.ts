@@ -1,11 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from 'shared-ui';
+import { CartService, SharedUiModule } from 'shared-ui';
+import { RouterLink } from '@angular/router';
+import { NgIf, AsyncPipe } from '@angular/common';
 
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss'],
+    standalone: true,
+    imports: [
+        SharedUiModule,
+        RouterLink,
+        NgIf,
+        AsyncPipe,
+    ],
 })
 export class HeaderComponent implements OnInit {
   constructor(private cs: CartService) {}

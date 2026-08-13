@@ -6,12 +6,10 @@ import { DashboardViewComponent } from './pages/dashboard-view/dashboard-view.co
 
 
 @NgModule({
-  declarations: [
-    DashboardViewComponent
-  ],
-  imports: [
-    CommonModule,
-    DashboardRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        DashboardRoutingModule,
+        DashboardViewComponent
+    ]
 })
 export class DashboardModule { }

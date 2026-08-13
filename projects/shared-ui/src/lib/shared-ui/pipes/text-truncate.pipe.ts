@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'textTruncate'
+    name: 'textTruncate',
+    standalone: true
 })
 export class TextTruncatePipe implements PipeTransform {
 

@@ -9,13 +9,10 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 import { MatTableModule } from '@angular/material/table';
 import { CommonModule } from '@angular/common';
 
-@NgModule({ declarations: [
-        AppComponent,
-        UsersListComponent
-    ],
+@NgModule({ declarations: [AppComponent],
     bootstrap: [AppComponent], imports: [BrowserModule,
         AppRoutingModule,
         SharedUiModule,
         MatTableModule,
-        CommonModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        CommonModule, UsersListComponent], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }

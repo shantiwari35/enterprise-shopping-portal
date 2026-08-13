@@ -2,11 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'projects/products-mfe/src/app/core/services/product-service.service';
 import { ProductsModule } from '../../products.module';
 import { CartService } from 'shared-ui';
+import { NgFor } from '@angular/common';
+import { ProductCardComponent } from '../../../../../../../shared-ui/src/lib/shared-ui/components/product-card/product-card.component';
 
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.scss']
+    selector: 'app-product-list',
+    templateUrl: './product-list.component.html',
+    styleUrls: ['./product-list.component.scss'],
+    standalone: true,
+    imports: [NgFor, ProductCardComponent]
 })
 export class ProductListComponent implements OnInit {
 

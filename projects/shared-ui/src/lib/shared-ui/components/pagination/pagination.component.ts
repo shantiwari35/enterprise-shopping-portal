@@ -1,10 +1,20 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
+import { NgClass, NgFor } from '@angular/common';
+import { AppIconComponent } from '../app-icon/app-icon.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'lib-pagination',
-  templateUrl: './pagination.component.html',
-  styleUrls: ['./pagination.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'lib-pagination',
+    templateUrl: './pagination.component.html',
+    styleUrls: ['./pagination.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [
+        NgClass,
+        AppIconComponent,
+        NgFor,
+        ReactiveFormsModule,
+    ],
 })
 export class PaginationComponent implements OnChanges {
   @Input() page = 1;

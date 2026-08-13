@@ -1,9 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NgClass, NgIf } from '@angular/common';
 
 @Component({
-  selector: 'lib-avatar',
-  templateUrl: './avatar.component.html',
-  styleUrls: ['./avatar.component.css'],
+    selector: 'lib-avatar',
+    templateUrl: './avatar.component.html',
+    styleUrls: ['./avatar.component.css'],
+    standalone: true,
+    imports: [NgClass, NgIf],
 })
 export class AvatarComponent  {
   @Input() src = '';

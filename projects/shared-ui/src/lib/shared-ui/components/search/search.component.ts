@@ -1,10 +1,15 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AppIconComponent } from '../app-icon/app-icon.component';
+import { NgIf } from '@angular/common';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'lib-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'lib-search',
+    templateUrl: './search.component.html',
+    styleUrls: ['./search.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [AppIconComponent, NgIf, ReactiveFormsModule, FormsModule]
 })
 export class SearchComponent {
   expanded = false;
